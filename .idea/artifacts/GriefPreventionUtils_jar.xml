@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GriefPreventionUtils:jar">
+    <output-path>$PROJECT_DIR$/../../../../Minecraft Plugin Target</output-path>
+    <root id="archive" name="GriefPreventionUtils.jar">
+      <element id="module-output" name="GriefPreventionUtils" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/Graymont/Claymore-Utils/1.8/Claymore-Utils-1.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

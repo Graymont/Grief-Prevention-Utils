@@ -1,0 +1,13 @@
+name: GriefPreventionUtils
+version: '1.0-GriefPreventionUtils'
+main: org.griefpreventionutils.griefPreventionUtils.GriefPreventionUtils
+api-version: '1.21'
+commands:
+  griefpreventionutils:
+    aliases:
+      - gputils
+      - gpl
+  claimtracker:
+    aliases:
+      - ctracker
+      - ctr
