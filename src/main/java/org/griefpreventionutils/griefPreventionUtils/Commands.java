@@ -136,11 +136,21 @@ public class Commands implements CommandExecutor, TabCompleter {
             else if (mainSub.equals("getitem")) {
                 if (args[1].equalsIgnoreCase("claimlicense")){
                     int amount = Integer.parseInt(args[2]);
-                    assert sender instanceof Player;
-                    Player player = (Player) sender;
 
-                    player.getInventory().addItem(new ItemStack(GetClaimLicense(amount)));
-                    player.sendMessage(sendText("&aObtained claim license with amount: &2"+amount));
+                    Player target;
+                    if (args.length >= 4 && !args[3].isEmpty()) {
+                        target = Bukkit.getPlayer(args[3]);
+                        if (target == null) {
+                            sender.sendMessage(sendText("&cPlayer not found!"));
+                            return true;
+                        }
+                        } else {
+
+                        target = (Player) sender;
+                    }
+
+                    target.getInventory().addItem(new ItemStack(GetClaimLicense(amount)));
+                    target.sendMessage(sendText("&aObtained claim license with amount: &2"+amount));
                 }
             }
 
